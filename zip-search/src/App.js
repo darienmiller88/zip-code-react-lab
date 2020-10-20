@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   retrieveZipCode = async () => {
-    const response = await fetch(`http://ctp-zip-api.herokuapp.com/zip/` + this.state.zip);
+    const response = await fetch(`http://ctp-zip-api.herokuapp.com/zip/${this.state.zip}`);
     if (response.ok) {
       const json = await response.json();
       this.setState({
